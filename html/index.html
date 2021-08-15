@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>html-loader</title>
+    <style type="text/css">
+        body {
+            font-family: 'Alegreya Sans SC', sans-serif;
+            font-size: 33px;
+        }
+        hr.style1 {
+            border-top: 2px dashed green;
+        }
+    </style>
+</head>
+<body>
+<%=accessUrl%><br/>
+<%=readingPath%><br/>
+<hr class="style1"/>
+<%
+    const list = urlAndTitleList
+    for(var i in list) {
+%>
+<a href="<%=list[i].href%>"><%=list[i].title%></a><br/>
+<% } %>
+</body>
+</html>
